@@ -16,7 +16,7 @@ public:
 
     auto getElement(int index) const -> T{};
 
-    auto insertElement() -> void {};
+    auto insertElement(T e, int index) -> void {};
 
     auto deleteElement() -> void {};
 

@@ -9,7 +9,7 @@ using namespace std;
 template<typename T, typename U>
 class Array{
 public:
-    Array(T _ArraySize): ArraySize(_ArraySize), size(_ArraySize){
+    Array(T _ArraySize): ArraySize(_ArraySize), size(0){
         data = new U(_ArraySize);
     }
     ~Array(){
@@ -26,8 +26,15 @@ public:
         return data[index];
     }
 
-    auto insertElement(T e) -> void {
-        
+    auto insertElement(T e, int index) -> void {
+        if (index < 0 || index > size) return ;
+        if (size + 1 >= ArraySize) resize();
+
+        for (int i = size; i > index; --i){
+            data[size] = data[size - 1];
+        }
+        data[index] = e;
+        size++;
     };
 
     auto deleteElement() -> void {};
