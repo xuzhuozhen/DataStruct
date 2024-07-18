@@ -9,20 +9,23 @@
 template<typename T, typename U>
 class Array{
 public:
-    Array(T _ArraySize): ArraySize(_ArraySize), size(_ArraySize){};
-    ~Array(){};
+    explicit Array(T _arraysize): ArraySize(_arraysize) {
+        size = 0;
+        data = new U(_arraysize);
+    };
+    ~Array();
 
-    auto initArray() -> void {};
+    auto initArray() -> void;
 
-    auto getElement(int index) const -> T{};
+    auto getElement(int index) const -> T;
 
-    auto insertElement(T e, int index) -> void {};
+    auto insertElement(T e, int index) -> void ;
 
-    auto deleteElement() -> void {};
+    auto deleteElement(int index) -> int ;
 
-    auto findIndex() const -> int {};
+    auto findIndex(T e) const -> int ;
 
-    auto resize() -> U* {};
+    auto resize() -> bool ;
 
 private:
     T ArraySize;

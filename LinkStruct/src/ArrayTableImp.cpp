@@ -37,9 +37,23 @@ public:
         size++;
     };
 
-    auto deleteElement() -> void {};
+    auto deleteElement(int index) -> int {
+        if (index < 0 || index > size - 1) return -1;
+        int deleteElement = data[index];
+        for (int i = index; i < size - 1; ++i) data[i] = data[i + 1];
+        size--;
 
-    auto findIndex() const -> int {};
+        return deleteElement;
+    };
+
+    auto findIndex(T e) const -> int {
+        int ans = -1;
+        for (int i = 0; i < size; ++i){
+            if (e == data[i])  ans = i;
+        }
+
+        return ans;
+    };
 
     auto resize() -> U* {};
 
