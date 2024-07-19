@@ -42,7 +42,7 @@ public:
      * @return 修改nums数组中的内容，返回修改后的数组长度
      */
     static int removeElement(vector<int>& nums, int val) {
-        
+
     }
 };
 
