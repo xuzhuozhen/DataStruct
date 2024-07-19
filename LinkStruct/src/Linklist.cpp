@@ -7,9 +7,9 @@ using namespace std;
 
 
 template<typename U>
-linklist<U>::linklist() {
+linklist<U>::linklist(U e) {
     size = 0;
-    head = new node<U>(-1);
+    head = new node<U>(e);
 }
 
 template<typename U>

@@ -20,7 +20,7 @@ private:
 
 
 public:
-    linklist();
+    explicit linklist(U e);
     ~linklist();
 
 

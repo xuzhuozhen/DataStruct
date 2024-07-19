@@ -12,7 +12,7 @@ public:
 
 
     /**
-     *
+     * @brief 二分搜索
      * @param nums
      * @param target
      * @return index of nums
@@ -32,6 +32,17 @@ public:
         }
 
         return -1;
+    }
+
+
+    /**
+     * @brief 原地移除相同元素
+     * @param nums
+     * @param val
+     * @return 修改nums数组中的内容，返回修改后的数组长度
+     */
+    static int removeElement(vector<int>& nums, int val) {
+        
     }
 };
 
