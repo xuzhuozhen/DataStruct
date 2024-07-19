@@ -8,6 +8,7 @@ template<typename T>
 struct node {
     T data;
     struct node* next;
+    explicit node(T e):data(e), next(nullptr){};
 };
 
 
@@ -22,8 +23,15 @@ public:
     linklist();
     ~linklist();
 
+
+    auto insertNode(U e) -> void;
+
+    auto deleteNode(int index) -> bool;
+
+    auto findNode(U e) -> node<U>*;
+
+    auto accessNode(int index) -> node<U>*;
+
 };
-
-
 
 #endif //LINKLIST_H
