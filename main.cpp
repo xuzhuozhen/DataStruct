@@ -3,7 +3,7 @@
 //
 #include "./LinkStruct/Header/ArrayTable.h"
 #include "./LinkStruct/Header/Linklist.h"
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -12,5 +12,6 @@ int main(){
 
     Array<int, int> nums(10);
     linklist<int> testLinklist(-1);
+    stack<int> s;
     return 0;
 }
